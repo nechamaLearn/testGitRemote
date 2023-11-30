@@ -2,25 +2,22 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Student from './student'
+import Class from './Class'
+import Shop from './Shop'
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-          <img src={reactLogo} className="logo react" alt="React logo" />
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
+      {/* <Student name="John Doe" age={15} grade={10} email="n@n.com" /> */}
+      {/* <Class grade={10} students={["John Doe", "Jane Doe", "John Smith"]} /> */}
+
+      <Shop title="My Shop" products={[
+        { id: 1, title: "Product 1", price: 100, quantity: 10 },
+        { id: 2, title: "Product 2", price: 200, quantity: 20 },
+        { id: 3, title: "Product 3", price: 300, quantity: 30 },
+      ]} />
     </>
   )
 }
